@@ -1,0 +1,189 @@
+html, body, .main{
+    width: 100%;
+    margin: 0;
+    height: 100%;
+
+}
+
+.nav_bar {
+	background-color: #202020AA;
+	box-shadow: 0 0 3px 1px #202020;
+	display: block;
+	width: 100%;
+	height: 64px;
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	left: 0px;
+    top: 0px;
+}
+.nav_color {
+    background-color: #FFFFFFFF;
+}
+.nav_bar a {
+	margin: 0;
+	font-weight: bold;
+	text-align: center;
+	padding:0;
+	width: 184px;
+    height: 64px;
+    line-height: 64px;
+	text-decoration: none;
+    color: #d37506;
+    font-size: 20px;
+    display: inline-block;
+}
+.nav_bar_links {
+    float: right;
+}
+.nav_bar .close_btn {
+    display: none;
+}
+.nav_btn {
+    display: none;
+}
+.parallax {
+	/*min-height: 600px;*/
+	height: 100%;
+	/*parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("images/book%20image.jpg");
+}
+h1 {
+    font-size: 36px;
+}
+h2 {
+    font-size: 28px;
+    color: #9f2b00;
+    text-align: center;
+}
+p {
+    font-size: 16px;
+    line-height: 300%;
+}
+.content {
+    width: 1024px;
+	margin: auto;
+	height: auto;
+}
+.left img {
+	height: 360px;
+	margin: 16px 16px 16px 16px;
+	float: left;
+}
+.right img {
+	height: 360px;
+	margin: 16px 16px 16px 16px;
+	float: right;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+    .nav_bar {
+        height: 100%;
+        /* 100% Full-height */
+        width: 0;
+        /* 0 width - change this with JavaScript */
+        position: fixed;
+        /* Stay in place */
+        z-index: 3;
+        /* Stay on top */
+        top: 0;
+        /* Stay at the top */
+        right: 0;
+        left: auto;
+        background-color: #111;
+        /* Black*/
+        overflow-x: hidden;
+        /* Disable horizontal scroll */
+        padding-top: 60px;
+        /* Place content 60px from the top */
+        transition: 0.5s;    
+        /* 0.5 second transition effect to slide in the sidenav */
+        box-shadow: none;
+    }
+    /* The navigation menu links */
+    .nav_bar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+    .nav_bar a:hover {
+        color: #f1f1f1;
+    }
+    /* Position and style the close button (top right corner) */
+    
+    .nav_bar .close_btn, .nav_btn {
+        color: white;
+        position: absolute;
+        font-size: 36px;
+        right: 14px;
+        top: 14px;
+        display: block;
+        width: 48px;
+        height: 48px;
+        z-index: 1;
+        border-radius: 50%;
+        padding: 0;
+        line-height: 48px;
+    }
+    /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+    
+    #main {
+        transition: margin-left .5s;
+        padding: 0;
+    }
+    body {
+        transition: background-color .3s;
+    }
+    /*styling of button to open navbar on mobile*/
+    .nav_btn {
+        position: fixed;
+        right: 14px;
+        top: 14px;
+        display: block;
+        width: 48px;
+        height: 48px;
+        z-index: 1;
+        border-radius: 50%;
+        z-index: 50;
+    }
+    /* <i> is the one of the 3 lines in the button shape*/
+
+    .nav_btn i {
+        box-sizing: border-box;
+        display: block;
+        width: 20px;
+        height: 3px;
+        background: #fff;
+        border-radius: 1px;
+        margin-left: 14px;
+        -webkit-border-radius: 1px;
+        -moz-border-radius: 1px;
+        -ms-border-radius: 1px;
+        -o-border-radius: 1px;
+    }
+    .nav_btn i:nth-child(1) {
+        margin-top: 16px;
+    }
+    .nav_btn i:nth-child(2) {
+        margin-top: 4px;
+        opacity: 1;
+    }
+    .nav_btn i:nth-child(3) {
+        margin-top: 4px;
+    }
+    .content {
+        width: 80%;
+    }
+}

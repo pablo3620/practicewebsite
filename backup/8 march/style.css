@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300|Ubuntu|Pacifico');
+html, body, .main{
+    width: 100%;
+    margin: 0;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.nav_bar {
+	background-color: #00000000;
+	display: block;
+	width: 100%;
+	height: 64px;
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	left: 0px;
+    top: 0px;
+}
+.nav_bar .nav_logo {
+    margin-left: 12px;
+    color: white;
+    display: inline-block;
+    height: 64px;
+    font-size: 48px;
+    line-height: 64px;
+    font-family: 'pacifico', cursive;
+
+}
+.nav_bar a {
+	margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+	text-align: center;
+	padding: 0;
+	width: 146px;
+    height: 64px;
+    line-height: 64px;
+	text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    display: inline-block;
+    transition: 0.3s;
+}
+.nav_bar a:hover {
+    background-color: #20202070;
+}
+.nav_bar_links {
+    float: right;
+    padding: 0 64px 0 0;
+}
+.nav_bar .close_btn {
+    display: none;
+}
+.nav_btn {
+    display: none;
+}
+.parallax {
+	/*min-height: 600px;*/
+	height: 100%;
+	/*parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("images/book%20image.jpg");
+}
+h1 {
+    font-size: 36px;
+    font-family: 'Ubuntu', sans-serif;
+}
+h2 {
+    font-size: 28px;
+    color: #9f2b00;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+p {
+    font-size: 16px;
+    line-height: 150%;
+}
+.content {
+    width: 1024px;
+	margin: auto;
+	height: auto;
+}
+.left img {
+	height: 360px;
+	margin: 16px 16px 16px 16px;
+	float: left;
+}
+.right img {
+	height: 360px;
+	margin: 16px 16px 16px 16px;
+	float: right;
+}
+
+
+/*moblie site - if change mobile page width also change in scrollFunction in scrollpositoion.js*/ 
+@media screen and (max-width: 1024px) {
+    /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
+    #main {
+        transition: margin-left .5s;
+        padding: 0;
+    }
+    body {
+        transition: background-color .3s;
+    }
+    .parallax {
+		display: none;
+    }
+    .content {
+		width: 100%;
+		margin-top: 0;
+		border-radius: 0;
+	}
+    .nav_bar {
+        height: 100%;
+        width: 0;/* closed width - change opened with in sideNav.js*/
+        position: fixed;/* Stay in place */
+        z-index: 3;/* Stay on top */
+        top: 0;/* Stay at the top */
+        right: 0;
+        left: auto;
+        background-color: #111;/*if change color of moblie nav bar also change color within else statment in sideNav.js*/
+        overflow-x: hidden;/* Disable horizontal scroll */
+        padding-top: 60px;/* placement of links*/
+        transition: 0.5s;/* 0.5 second transition effect to slide in the sidenav */
+        box-shadow: none;
+    }
+    /* The navigation menu links */
+    .nav_bar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+    .nav_bar a:hover {
+        color: #f1f1f1;
+    }
+    /*styling of button to open navbar on mobile*/
+    .nav_btn {
+        position: fixed;
+        right: 14px;
+        top: 14px;
+        display: block;
+        width: 48px;
+        height: 48px;
+        z-index: 1;
+        border-radius: 50%;
+        transition: 0.5s;
+    }
+    .close_btn {
+        z-index: -1;
+    }
+
+
+    /* <i> is the one of the 3 lines in the button shape*/
+    .nav_btn i {
+        box-sizing: border-box;
+        display: block;
+        width: 20px;
+        height: 2.4px;
+        background-color: #000;
+        border-radius: 1px;
+        margin-left: 14px;
+        -webkit-border-radius: 1px;
+        -moz-border-radius: 1px;
+        -ms-border-radius: 1px;
+        -o-border-radius: 1px;
+    }
+    .nav_btn i:nth-child(1) {
+        margin-top: 16px;
+    }
+    .nav_btn i:nth-child(2) {
+        margin-top: 4px;
+        opacity: 1;
+    }
+    .nav_btn i:nth-child(3) {
+        margin-top: 4px;
+    }
+    .opened {
+        transform: rotate(45deg);
+    }
+    .opened i{
+        transition: transform 0.4s ease;        
+    }
+    .opened i:nth-child(1) {
+        transform: translateY(6.3px) rotate(180deg);
+    }
+    .opened i:nth-child(2) {
+        opacity: 0;
+    }
+    .opened i:nth-child(3) {
+        transform: translateY(-6.3px) rotate(90deg);
+    }
+    /* code for the button transform animation used on the mobile site. is hidden on desktop site*/
+    /*
+    #nav:checked+.nav_btn {
+        transform: rotate(45deg);
+    }
+    #nav:checked+.nav_btn i {
+        background: #000;
+        transition: transform 0.2s ease;
+    }
+    #nav:checked+.nav_btn i:nth-child(1) {
+        transform: translateY(6px) rotate(180deg);
+    }
+    #nav:checked+.nav_btn i:nth-child(2) {
+        opacity: 0;
+    }
+    #nav:checked+.nav_btn i:nth-child(3) {
+        transform: translateY(-6px) rotate(90deg);
+    }
+    #nav:checked~.nav_bar {
+        z-index: 9990;
+        opacity: 1;
+        display: inline-block;
+    }
+    #nav:checked~.nav_bar ul li a {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    */
+}

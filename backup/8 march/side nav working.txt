@@ -1,0 +1,13 @@
+ document.body.scrollTop > winheight || */
+window.onscroll = function() {scrollFunction()};
+var winheight = window.innerHeight
+function scrollFunction() {
+    var navBar = document.getElementById("mySidenav");
+    if (document.documentElement.scrollTop > winheight-navBar.offsetHeight) {
+        navBar.style.backgroundColor = "#ffffffff"
+        navBar.style.boxShadow = "0 0 7px 1px #5f5f5f"
+    } else {
+        navBar.style.backgroundColor = "rgba(0, 0, 0, 0)"
+        navBar.style.boxShadow = "none"
+    }
+}

@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu|Pacifico|Titillium+Web|Montserrat');
+* {
+    transition: 0.3s;
+}
+html,
+body,
+.main {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    padding: 0;
+}
+
+.nav_bar {
+    /*set to same as scrollposition.js inital color*/
+    background-color: #00000000;
+    display: block;
+    width: 100%;
+    height: 64px;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    transition: 0s;
+}
+
+.nav_bar .nav_logo {
+    margin-left: 12px;
+    color: white;
+    display: inline-block;
+    height: 64px;
+    font-size: 48px;
+    line-height: 64px;
+    font-family: 'pacifico', cursive;
+
+}
+
+.nav_bar_links {
+    float: right;
+    padding: 0 64px 0 0;
+}
+
+.nav_bar a {
+    margin: 0;
+    font-family: 'titillium web', sans-serif;
+    text-align: center;
+    padding: 0;
+    width: 146px;
+    height: 64px;
+    line-height: 64px;
+    text-decoration: none;
+    color: #ddd;
+    font-size: 24px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.nav_bar a:hover {
+    background-color: #20202070;
+}
+
+.nav_bar .close_btn {
+    display: none;
+}
+
+.nav_btn {
+    display: none;
+}
+.parallax {
+    height: 60vh;
+    /*parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.top.parallax {
+    height:100vh;
+}
+.top.parallax.home {
+    background-image: url("images/book%20image.jpg");
+}
+.m1.parallax.home {
+    background-image: url("images/SPOILER_main-poly.jpg")
+}
+.m2.parallax.home {
+    background-image: url("images/hungergames\ 2.jpg")
+}
+
+h1 {
+    font-size: 36px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h2 {
+    font-size: 28px;
+    color: #9f2b00;
+    text-align: center;
+    font-family: 'Titillium web', sans-serif;
+}
+
+p {
+    font-size: 16px;
+    color: #202020;
+    line-height: 150%;
+    text-align: justify;
+}
+
+.content {
+    width: 1024px;
+    margin: 30px auto;
+    height: auto;
+}
+
+.left img {
+    height: 280px;
+    margin: 16px 16px 16px 16px;
+    float: left;
+}
+
+.right img {
+    height: 280px;
+    margin: 16px 16px 16px 16px;
+    float: right;
+}
+
+.slider {
+    width: 100%;
+    height:auto;
+    padding: 0;
+    display: inline-block;
+}
+
+.slidercontents {
+    width: 80%;
+    display: none;
+    margin: auto;
+}
+
+.slidercontents:first-of-type {
+    display: inline-block;
+}
+
+/*height of button is sized by javascript in slider.js*/
+.button {
+    width: 10%;
+    background-color: #00000000;
+    color: #202020;
+    font-size: 28px;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+.left.button {
+    float:left;
+}
+.right.button {
+    float:right;
+}
+
+
+
+
+
+
+
+
+.footer-distributed{
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: normal 16px sans-serif;
+
+	padding: 45px 50px;
+	margin-top: 40px;
+}
+
+.footer-distributed .footer-left p{
+	color:  #8f9296;
+	font-size: 14px;
+	margin: 0;
+}
+
+/* Footer links */
+
+.footer-distributed p.footer-links{
+	font-size:18px;
+	font-weight: bold;
+	color:  #ffffff;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.footer-distributed p.footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-right{
+	float: right;
+	margin-top: 6px;
+	max-width: 180px;
+}
+
+.footer-distributed .footer-right a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-left: 3px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 600px) {
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-right{
+		text-align: center;
+	}
+
+	.footer-distributed .footer-right{
+		float: none;
+		margin: 0 auto 20px;
+	}
+
+	.footer-distributed .footer-left p.footer-links{
+		line-height: 1.8;
+	}
+}
+
+/*css for darkmode*/
+.dark_mode.main {
+    background-color: #202020
+}
+.dark_mode p {
+    color:#ddd;
+}
+.dark_mode .button, .dark_mode .nav_btn.open_btn i {
+    color: #ddd;
+    
+}
+
+
+
+
+
+
+
+
+/*moblie site - if change mobile page width also change in scrollFunction in scrollpositoion.js*/
+@media screen and (max-width: 1024px) {
+    /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
+    #main {
+        transition: margin-left .5s;
+        padding: 0;
+    }
+
+    body {
+        transition: background-color .3s;
+    }
+
+    .parallax {
+        display: none;
+    }
+    h2 {
+        margin: 0;
+    }
+    p {
+        text-align: left;
+    }
+    .content {
+        width: 95%;
+        margin: 0 auto;
+        border-radius: 0;
+    }
+
+    .nav_bar {
+        height: 100%;
+        width: 0;
+        /* closed width - change opened with in sideNav.js*/
+        position: fixed;
+        /* Stay in place */
+        z-index: 3;
+        /* Stay on top */
+        top: 0;
+        /* Stay at the top */
+        right: 0;
+        left: auto;
+        background-color: #111;
+        /*if change color of moblie nav bar also change color within else statment in sideNav.js*/
+        overflow-x: hidden;
+        /* Disable horizontal scroll */
+        padding-top: 60px;
+        /* placement of links*/
+        transition: 0.5s;
+        /* 0.5 second transition effect to slide in the sidenav */
+        box-shadow: none;
+    }
+
+    /* The navigation menu links */
+    .nav_bar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .nav_bar a:hover {
+        color: #f1f1f1;
+    }
+
+    /*styling of button to open navbar on mobile*/
+    .nav_btn {
+        position: fixed;
+        right: 14px;
+        top: 14px;
+        display: block;
+        width: 48px;
+        height: 48px;
+        z-index: 1;
+        border-radius: 50%;
+        transition: 0.5s;
+    }
+
+    .close_btn {
+        z-index: -1;
+    }
+
+
+    /* <i> is the one of the 3 lines in the button shape*/
+    .nav_btn i {
+        box-sizing: border-box;
+        display: block;
+        width: 20px;
+        height: 2.4px;
+        background-color: #000;
+        border-radius: 1px;
+        margin-left: 14px;
+        -webkit-border-radius: 1px;
+        -moz-border-radius: 1px;
+        -ms-border-radius: 1px;
+        -o-border-radius: 1px;
+    }
+
+    .nav_btn i:nth-child(1) {
+        margin-top: 16px;
+    }
+
+    .nav_btn i:nth-child(2) {
+        margin-top: 4px;
+        opacity: 1;
+    }
+
+    .nav_btn i:nth-child(3) {
+        margin-top: 4px;
+    }
+
+    /*
+    .opened {
+        transform: rotate(45deg);
+    }*/
+    .nav_btn i {
+        transition: transform 0.5s ease;
+        animation-timing-function: ease-out;
+    }
+
+    .opened i:nth-child(1) {
+        transform: translate(7.2px, 1.6px) rotate(45deg);
+        width: 14.2px;
+    }
+
+    .opened i:nth-child(2) {
+        opacity: 1;
+    }
+
+    .opened i:nth-child(3) {
+        transform: translate(7.2px, -1.6px) rotate(-45deg);
+        width: 14.2px;
+    }
+    /*moblie darkmode code*/
+    .dark_mode .nav_btn i {
+        background-color: #ddd;
+    }
+}
